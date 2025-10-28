@@ -1,17 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+  <meta charset="UTF-8">
+  <title>Login</title>
 </head>
 <body>
-    <h2>Login Portal</h2>
-    <form action="LoginServlet" method="post">
-        Username: <input type="text" name="username" required><br><br>
-        Password: <input type="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
-    <p style="color:red;">
-        <% if(request.getParameter("error") != null) out.print("Invalid Username or Password!"); %>
-    </p>
+  <form method="post" action="login.jsp">
+    <input type="text" name="username" placeholder="username" required />
+    <input type="password" name="password" placeholder="password" required />
+    <input type="submit" value="Login" />
+  </form>
 </body>
 </html>
